@@ -53,8 +53,8 @@ class Regressor(paddle.nn.Layer):
         # 初始化父类中的一些参数
         super(Regressor, self).__init__()
         
-        # 定义一层全连接层，输入维度是13，输出维度是1
-        self.fc = Linear(in_features=13, out_features=1)
+        # 定义一层全连接层，输入维度是13，输出维度是1, 没有激活函数
+        self.fc = Linear(in_features=13, out_features=1, act=None)
     
     # 网络的前向计算
     def forward(self, inputs):
